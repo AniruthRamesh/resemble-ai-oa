@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# Resemble AI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+1. [Installation](#installation)
+   - [macOS](#macos)
+   - [Windows](#windows)
+2. [Setup](#setup)
+3. [Assumptions/Limitations](#assumptionslimitations)
+4. [Improvements if Had More Time](#improvements-if-had-more-time)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### macOS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Ensure you have Homebrew installed**:
+   - If not, you can install it with the following command:
+     ```bash
+     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+     ```
+2. **Install Node.js**:
+   - You can install Node.js using Homebrew:
+     ```bash
+     brew install node
+     ```
+3. **Verify Node.js Installation**:
+   - Ensure Node.js and npm are installed correctly:
+     ```bash
+     node -v
+     npm -v
+     ```
 
-### `npm test`
+### Windows
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Ensure you have Chocolatey installed**:
+   - If not, you can install it by following the instructions on the [Chocolatey website](https://chocolatey.org/install).
+2. **Install Node.js**:
+   - You can install Node.js using Chocolatey:
+     ```bash
+     choco install nodejs
+     ```
+3. **Verify Node.js Installation**:
+   - Ensure Node.js and npm are installed correctly:
+     ```bash
+     node -v
+     npm -v
+     ```
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Download and Unzip the Project**:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   - Download the project zip file and unzip it to your desired location.
+   - Navigate to the unzipped project directory:
+     ```bash
+     cd your-unzipped-project-directory
+     ```
 
-### `npm run eject`
+2. **Install Dependencies**:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   - Once inside the project directory, run the following command to install the necessary dependencies:
+     ```bash
+     npm install
+     ```
+   - This command will install all the required packages specified in the `package.json` file.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Running the Application**:
+   - To start the development server, run:
+     ```bash
+     npm start
+     ```
+   - The application should now be running at `http://localhost:3000`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Assumptions/Limitations
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Assumptions**:
 
-## Learn More
+  - The grid to list out voices (I assumed that should be in the voices page - Not using the same logic do search the dropdown in the home page)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Limitations/Tradeoffs I made**:
+  - Need Proper error handling in place. (I have identified some edge cases and mentioned them. Chosen the current method for speed.)
+  - TypeScript is not Utilized for type safety. (I'm more comfortable with Plain js and utilized this method for speed)
+  - Need better folder structure/component structure.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Improvements if Had More Time
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Improving the code quality. Better organization of the components/Folder.
+- Testing the application/Error handling
+- Creating a datastructure to store the objects for voices.
+- Utilizing TypeScript for the type Safety
+- Implementing robust state management and decoupling the logic from Home.jsx
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
